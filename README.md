@@ -2,18 +2,40 @@
 
 Full-stack Kumaon travel platform using React, Node.js, Express and MongoDB.
 
+## Project structure
+
+```text
+Tour-Travel/
+├── frontend/    React 19 + TypeScript customer site and admin dashboard
+├── backend/     Node.js + Express + MongoDB REST API
+└── package.json Combined development commands
+```
+
 ## Full-stack development
 
-Frontend only:
+Install root, frontend and backend dependencies:
+
+```bash
+npm install
+npm run install:all
+```
+
+Frontend and backend together:
 
 ```bash
 npm run dev
 ```
 
-Frontend and backend together, following the Gym Management project workflow:
+Frontend only:
 
 ```bash
-npm run dev:all
+npm run client
+```
+
+Backend only:
+
+```bash
+npm run server
 ```
 
 Before running both services, copy `backend/.env.example` to `backend/.env` and set `MONGODB_URI`.
