@@ -1,4 +1,27 @@
-# vinext-starter
+# Pahadi Safar — Tour & Travel Management
+
+Full-stack Kumaon travel platform using React, Node.js, Express and MongoDB.
+
+## Full-stack development
+
+Frontend only:
+
+```bash
+npm run dev
+```
+
+Frontend and backend together, following the Gym Management project workflow:
+
+```bash
+npm run dev:all
+```
+
+Before running both services, copy `backend/.env.example` to `backend/.env` and set `MONGODB_URI`.
+
+- Frontend: `http://localhost:3000`
+- Backend: `http://localhost:5001/api`
+
+## Frontend foundation
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and

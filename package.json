@@ -7,6 +7,9 @@
   },
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log node_modules/node/bin/node node_modules/vinext/dist/cli.js dev",
+    "dev:frontend": "WRANGLER_LOG_PATH=.wrangler/wrangler.log node_modules/node/bin/node node_modules/vinext/dist/cli.js dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:all": "node_modules/node/bin/node node_modules/concurrently/dist/bin/index.js -n FRONTEND,BACKEND -c green,blue npm:dev:frontend npm:dev:backend",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log node_modules/node/bin/node node_modules/vinext/dist/cli.js build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log node_modules/node/bin/node node_modules/vinext/dist/cli.js start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
@@ -27,6 +30,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
+    "concurrently": "^10.0.4",
     "drizzle-kit": "0.31.10",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
